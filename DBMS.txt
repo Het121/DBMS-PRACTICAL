@@ -1,0 +1,165 @@
+DBMS 
+1) DECLARE  
+   a integer := 30;  
+   b integer := 40;  
+   c integer;  
+   f real;  
+BEGIN  
+   c := a + b;  
+   dbms_output.put_line('Value of c: ' || c);  
+   f := 100.0/3.0;  
+   dbms_output.put_line('Value of f: ' || f);  
+END;  
+
+
+2)Sum of two number:
+ declare
+a number(5);
+b number(5);
+begin
+a:=:a;	
+b:=:b;
+dbms_output.put_line('Add = '||(a+b));
+dbms_output.put_line('Sub = '||(a-b));
+end;
+
+3)
+declare
+a number(5);
+b number(5);
+begin
+a:=:a;
+b:=:b;
+dbms_output.put_line('before swap A='||a||'B='||b);
+a:=a+b;abh
+b:=a-b;
+a:=a-b;
+dbms_output.put_line('After swap A='||a||'B='||b);
+end;
+
+
+4)sum of two number 
+declare
+a number(5);
+b number(5);
+begin
+a:=:a;
+b:=:b;
+dbms_output.put_line('add='||(a+b));
+dbms_output.put_line('sub='||(a-b));
+dbms_output.put_line('mul='||(a*b));
+dbms_output.put_line('div='||(a/b));
+end;
+
+5)Total of all subject marks 
+declare
+a number(5);
+b number(5);
+begin
+a:=:a;
+b:=:b;
+dbms_output.put_line('add='||(a+b));
+dbms_output.put_line('sub='||(a-b));
+dbms_output.put_line('mul='||(a*b));
+dbms_output.put_line('div='||(a/b));
+end;
+
+
+6)even and odd number:
+declare
+ no number:=12;
+ begin
+ if mod(no,2)=0 then
+ dbms_output.put_line('It is even number');
+ else
+ dbms_output.put_line('It is odd number');
+ end if;
+ end;
+
+7)even odd number given by user: 
+Declare
+ no number:=&no;
+ begin
+ if mod(no,2)=0
+ then 
+dbms_output.put_line('It is even number'); 
+else
+ dbms_output.put_line('It is odd number'); 
+end if;
+ end;
+
+
+
+
+8)Maximum number 
+DECLARE
+	a NUMBER := 46;
+	b NUMBER := 67;
+	c NUMBER := 21;
+BEGIN
+ 	IF a > b
+	AND a > c THEN
+	dbms_output.Put_line('Greatest number is '||a);
+	ELSIF b > a
+		AND b > c THEN
+	dbms_output.Put_line('Greatest number is '||b);
+	ELSE
+	dbms_output.Put_line('Greatest number is '||c);
+	END IF;
+
+END;
+
+
+
+9)sum of all number of series
+DECLARE
+   SUMM NUMBER :=0;
+BEGIN
+   FOR I IN 11..40
+   LOOP
+       SUMM:= SUMM + I;
+END LOOP;
+ DBMS_OUTPUT.PUT_LINE('Sum is =' || SUMM);
+END;
+
+10)print to a 5 10 15…25
+DECLARE
+var1 number;
+BEGIN
+   var1:=5;
+   FOR var2 in 1..5
+   LOOP     
+ DBMS_OUTPUT.PUT_LINE(var1*var2);
+END LOOP;
+END;
+
+11)print 1 to 10 using for loop
+declare
+   a number;
+begin
+  for a in 1..10 loop
+dbms_output.put_line(a);
+end loop;
+end;
+
+12) print 1 to 10 using while loop
+declare
+ i integer:=1;
+begin
+while i<=10 loop
+dbms_output.put_line(i);
+i:=i+1;
+end loop;
+end;
+
+
+13) sum of all digits 
+DECLARE
+   SUMM NUMBER := 0;
+BEGIN
+    FOR I IN 1..10
+    LOOP   
+         SUMM := SUMM + I;
+  END LOOP;
+    DBMS_OUTPUT.PUT_LINE ('Sum = ' || SUMM);
+END;
